@@ -1,0 +1,6 @@
+.DS_Store
+_site/
+__pycache__/
+node_modules/
+playwright-report/
+test-results/
