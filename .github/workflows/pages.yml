@@ -20,7 +20,31 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
       - name: Configure Pages
+        id: pages
+        # Requires an existing Pages site; GITHUB_TOKEN cannot initialize one.
         uses: actions/configure-pages@v5
+      - name: Explain Pages configuration failure
+        if: ${{ failure() && steps.pages.outcome == 'failure' }}
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'SUMMARY'
+          ## GitHub Pages configuration failed
+
+          This workflow already requests `contents: read`, `pages: write`, and
+          `id-token: write`. A failed Pages lookup can mean the Pages site has
+          not been initialized or is inaccessible to the workflow token.
+
+          A repository administrator should verify this repository's Pages site
+          with `gh api repos/qitaifeng5-lang/barbershop-demo/pages`.
+          If that authenticated request returns 404, follow the initialization
+          instructions in README.md. If it returns 403, check administrative
+          access, repository visibility/plan, and organization Pages policies.
+
+          Source must be GitHub Actions. Selecting that source alone is not
+          evidence that the Pages API can retrieve the site. Do not add
+          `enablement: true` with the default GITHUB_TOKEN: site initialization
+          requires a separate administrative credential. After fixing settings,
+          rerun this workflow. No deployment success is implied by this summary.
+          SUMMARY
       - name: Prepare public files only
         run: |
           mkdir _site
