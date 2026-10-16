@@ -180,7 +180,7 @@ form.addEventListener("submit", (event) => {
   const service = serviceDetails[serviceField.value];
   result.replaceChildren();
   const heading = document.createElement("h4");
-  heading.textContent = "Your demo appointment preview";
+  heading.textContent = "Demo only — no appointment booked";
   const summary = document.createElement("p");
   const dateLabel = new Date(`${dateField.value}T12:00:00`).toLocaleDateString(
     "en-CA",
@@ -189,7 +189,7 @@ form.addEventListener("submit", (event) => {
   summary.textContent = `${name.value.trim()}, here’s your preview: ${service.name} · CA$${service.price} · ${service.duration} minutes · ${dateLabel} at ${timeField.value} (local time).`;
   const notice = document.createElement("p");
   notice.textContent =
-    "This is not a confirmed appointment. Nothing was submitted or saved, and no email will be sent.";
+    "This is not a confirmed appointment. Nothing was submitted or saved, and no email will be sent. THE CUT STUDIO is a fictional portfolio concept, not a real business.";
   const reset = document.createElement("button");
   reset.type = "button";
   reset.textContent = "Start a new demo";

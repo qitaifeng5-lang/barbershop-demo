@@ -86,3 +86,16 @@ PAT secret just to initialize Pages once.
 After initialization/access is fixed, rerun the failed workflow or use its
 **Run workflow** button. Deployment is verified only when the deployment step
 succeeds and the published site responds with the expected content.
+
+## Portfolio presentation safeguards
+
+Services, CAD prices, and opening hours are explicitly fictional examples. No
+physical address, real customer testimonials, or business accreditations are
+claimed. The top banner and footer identify the site as a portfolio demo; the
+booking preview repeats that no appointment has been booked.
+
+The page's Content Security Policy blocks form submission and scripted outbound
+connections, in addition to the booking handler's local-only behavior. The hero
+image is preloaded; below-the-fold images use lazy loading and asynchronous
+decoding. There are no runtime third-party fonts or scripts. Social metadata
+identifies the project as a portfolio concept, rather than a real local business.

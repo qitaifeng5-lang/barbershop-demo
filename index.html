@@ -8,6 +8,24 @@
       name="description"
       content="Discover THE CUT STUDIO: a fictional premium barbershop concept. Explore signature cuts, grooming services, and an interactive appointment demo. No real bookings."
     />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="form-action 'none'; connect-src 'none'; object-src 'none'; base-uri 'self'"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/hero.jpg"
+      fetchpriority="high"
+    />
+    <meta
+      property="og:url"
+      content="https://qitaifeng5-lang.github.io/barbershop-demo/"
+    />
+    <meta
+      property="og:image:alt"
+      content="AI-generated luxury barbershop interior for a fictional portfolio concept"
+    />
     <meta name="theme-color" content="#121311" />
     <link
       rel="canonical"
@@ -20,7 +38,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       property="og:title"
-      content="THE CUT STUDIO — Look Sharp. Feel Confident."
+      content="THE CUT STUDIO — Premium Barbershop Portfolio Demo"
     />
     <meta
       property="og:description"
@@ -154,6 +172,7 @@
             width="1536"
             height="1024"
             loading="lazy"
+            decoding="async"
           />
           <div class="image-caption">
             <span>THE CUT STUDIO</span><span>EST. AS A CONCEPT · 2026</span>
@@ -163,11 +182,11 @@
           </div>
         </div>
         <div class="about-copy reveal">
-          <p class="eyebrow">01 / OUR STORY</p>
+          <p class="eyebrow">01 / THE CONCEPT STORY</p>
           <h2>A good cut changes<br />more than your <em>look.</em></h2>
           <p class="lead">It changes how you walk into a room.</p>
           <p>
-            At THE CUT STUDIO, we believe grooming should feel as good as it
+            This fictional studio imagines grooming that feels as good as it
             looks. A place to slow down, settle in, and leave a little more
             yourself.
           </p>
@@ -205,7 +224,7 @@
             </div>
             <p>
               Timeless essentials. A finish that feels like you.<br /><span
-                >Sample pricing in Canadian dollars.</span
+                >Fictional services & sample pricing in Canadian dollars.</span
               >
             </p>
           </div>
@@ -337,7 +356,7 @@
           </div>
           <p class="menu-footnote">
             Every service starts with a conversation. All services and prices
-            are illustrative.
+            are fictional examples, not offers for purchase.
           </p>
         </div>
       </section>
@@ -356,9 +375,10 @@
           <figure class="gallery-item reveal">
             <img
               src="assets/cut.jpg"
-              width="700"
-              height="900"
+              width="800"
+              height="1200"
               loading="lazy"
+              decoding="async"
               alt="Precision barbering and a sharply finished haircut"
             />
             <figcaption>
@@ -379,9 +399,10 @@
           <figure class="gallery-item reveal">
             <img
               src="assets/detail.jpg"
-              width="700"
-              height="900"
+              width="800"
+              height="1200"
               loading="lazy"
+              decoding="async"
               alt="AI-generated hairstyle inspiration: a short textured crop with a precise taper and beard"
             />
             <figcaption>
@@ -405,6 +426,7 @@
               width="1536"
               height="1024"
               loading="lazy"
+              decoding="async"
               alt="Timeless barbershop atmosphere and styling inspiration"
             />
             <figcaption>
@@ -536,7 +558,8 @@
             </div>
           </div>
           <div class="field">
-            <label for="name">Your name <span>(fictional is fine)</span></label
+            <label for="name"
+              >Demo name <span>(use fictional details)</span></label
             ><input
               id="name"
               name="name"
@@ -612,8 +635,8 @@
             </p>
           </div>
           <div class="hours">
-            <h3>Opening hours</h3>
-            <p class="eyebrow">ILLUSTRATIVE STUDIO HOURS</p>
+            <h3>Example opening hours</h3>
+            <p class="eyebrow">FICTIONAL HOURS · ALL TIMES LOCAL</p>
             <dl>
               <div>
                 <dt>Monday</dt>
@@ -636,9 +659,8 @@
           <div class="contact-details">
             <h3>The neighbourhood</h3>
             <p>
-              100 Example Avenue<br />Toronto, Ontario, Canada<br /><span
-                >Fictional address — no physical studio</span
-              >
+              A fictional Canadian studio concept<br />No physical location or
+              mailing address<br /><span>Portfolio presentation only</span>
             </p>
             <h3>Say hello</h3>
             <p>

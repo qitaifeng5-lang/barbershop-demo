@@ -1425,3 +1425,30 @@ p {
 .booking-form .button {
   min-height: 52px;
 }
+
+/* Comfortable touch targets without changing the desktop composition. */
+@media (max-width: 800px) {
+  .text-link {
+    min-height: 44px;
+  }
+  .footer-bottom a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    width: fit-content;
+  }
+  .checkbox {
+    min-height: 44px;
+    align-items: center;
+  }
+}
+@media (max-width: 560px) {
+  .demo-banner {
+    font-size: 8px;
+    letter-spacing: 1px;
+    min-height: 36px;
+  }
+  .contact-grid .eyebrow {
+    line-height: 1.8;
+  }
+}
